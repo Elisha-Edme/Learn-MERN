@@ -14,7 +14,7 @@ const createWorkout = (req, res) => {
 // GET all workouts
 const getWorkouts = (req, res) => {
     workout.find({}).then((response) => {
-        res.json(response.sort({createdAt: -1}));
+        res.json(response);
     }).catch((err) => {
         res.json(err);
     });
