@@ -8,7 +8,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.json())
-app.use('/api/workouts', workoutRoutes);
+app.use('/api/', workoutRoutes);
 const connect = async () => mongoose.connect(process.env.MONGO_URI);
 connect().then(() => {
   console.log('MongoDB connected properly!')
